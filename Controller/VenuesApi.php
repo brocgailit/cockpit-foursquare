@@ -18,6 +18,8 @@ class VenuesApi extends Controller {
 
     public function index() {
 
+		return 'test';
+
 		$res = $this->foursquare->query('search', [
 			'limit' => $this->app->param('limit') ?: 100,
 			'query' => $this->app->param('query') ?: '',
