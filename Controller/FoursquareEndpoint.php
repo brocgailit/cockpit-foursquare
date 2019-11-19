@@ -10,8 +10,8 @@ class FoursquareEndpoint {
 	private $client;
 
 	public function __construct($base_uri, $options) {
-		$this->client_id = $options['client_id'];
-		$this->client_secret = $options['client_secret'];
+		$this->client_id = $options->client_id;
+		$this->client_secret = $options->$client_secret;
 		$this->client = new Client([
 			'base_uri' => $base_uri
 		]);
