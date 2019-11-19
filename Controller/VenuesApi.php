@@ -18,6 +18,8 @@ class VenuesApi extends Controller {
 
     public function index() {
 
+		return $this->foursquare->client_id;
+
 		$res = $this->foursquare->query('search', [
 			'limit' => $this->app->param('limit') ?: 100,
 			'query' => $this->app->param('query') ?: '',
@@ -26,7 +28,6 @@ class VenuesApi extends Controller {
 		]);
 
 		return $this->foursquare->renderResponse($res, function($res) {
-			return $res;
 			return ['venues' => $res->response];
 		});
 	}
@@ -39,7 +40,6 @@ class VenuesApi extends Controller {
 		$res = $this->foursquare->query($id);
 
 		return $this->foursquare->renderResponse($res, function($res) {
-			return $res;
 			return ['venue' => $res->response];
 		});
 	}
