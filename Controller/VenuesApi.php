@@ -26,6 +26,7 @@ class VenuesApi extends Controller {
 		]);
 
 		return $this->foursquare->renderResponse($res, function($res) {
+			return $res;
 			return ['venues' => $res->response];
 		});
 	}
