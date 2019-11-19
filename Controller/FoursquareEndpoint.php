@@ -30,11 +30,13 @@ class FoursquareEndpoint {
 
 	public function renderResponse($res, $return_fn) {
 
-		/* $status = $res->requestStatus;
+		$this->client_id;
+
+		$status = $res->requestStatus;
 
 		if ( !$status->success ) {
 			return $status;		
-		} */
+		}
 
 		return $return_fn($res);
 	}
