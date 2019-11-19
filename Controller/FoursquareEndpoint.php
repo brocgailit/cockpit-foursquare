@@ -18,7 +18,7 @@ class FoursquareEndpoint {
 	}
 
 	public function query($endpoint = '', $options = []) {
-		return $this->client_id;
+		return '$this->client_id';
 		$res = $this->client->request('GET', $endpoint, [
 			'query' => array_merge([
 				'v' => '20190112',
