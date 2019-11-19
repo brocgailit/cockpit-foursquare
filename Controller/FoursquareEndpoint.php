@@ -10,15 +10,14 @@ class FoursquareEndpoint {
 	private $client;
 
 	public function __construct($base_uri, $options) {
-		$this->client_id = $options->client_id;
-		$this->client_secret = $options->$client_secret;
+		$this->client_id = $options['client_id'];
+		$this->client_secret = $options['client_secret'];
 		$this->client = new Client([
 			'base_uri' => $base_uri
 		]);
 	}
 
 	public function query($endpoint = '', $options = []) {
-		return '$this->client_id';
 		$res = $this->client->request('GET', $endpoint, [
 			'query' => array_merge([
 				'v' => '20190112',
