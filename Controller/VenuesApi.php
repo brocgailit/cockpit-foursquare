@@ -1,6 +1,6 @@
 <?php
 
-namespace Rezdy\Controller;
+namespace Foursquare\Controller;
 
 use \LimeExtra\Controller;
 use Foursquare\Controller\FoursquareEndpoint;
@@ -10,7 +10,7 @@ class VenuesApi extends Controller {
 
 	public function __construct($options) {
 		parent::__construct($options);
-        $this->rezdy = new FoursquareEndpoint(
+        $this->foursquare = new FoursquareEndpoint(
 			'https://api.foursquare.com/v2/venues/',
 			$this->app['config']['foursquare']
 		);

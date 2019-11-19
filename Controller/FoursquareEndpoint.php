@@ -1,6 +1,6 @@
 <?php
 
-namespace Rezdy\Controller;
+namespace Foursquare\Controller;
 
 use GuzzleHttp\Client;
 
